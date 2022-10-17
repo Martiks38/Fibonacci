@@ -7,13 +7,30 @@
   <title>Fibo</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
   <section class="h-screen">
-    <div class="pt-10 pb-20 px-8">
-      <h1 class="pt-4 md:text-8xl">Generador de números de Fibonacci</h1>
+    <div class="flex flex-col items-center pt-10 pb-20 px-8">
+      <h1 class="pt-4 text-center font-black sm:text-2xl md:text-4xl">Generador de números de Fibonacci</h1>
+      <div>
+        <form class="flex flex-col mt-10 md:w-96 gap-y-2">
+          <label for="number" class="font-bold sm:text-xl">Introduzca un número no negativo</label>
+          <input type="text" name="number" id="number"
+            class="block px-2 py-1 border-solid border-2 border-black rounded-md" placeholder="10">
+          <button type="submit"
+            class="mt-4 py-1.5 px-2.5 border-4 border-solid border-black rounded-md font-semibold">Calcular</button>
+        </form>
+        <div class="pt-20 items-start w-full">
+          <h2 class="flex items-center gap-x-1 font-bold text-lg">
+            El término <span id="term">10</span> es<span id="number" class="text-2xl">55</span>
+          </h2>
+        </div>
+      </div>
     </div>
   </section>
 </body>
