@@ -5,3 +5,8 @@
 * {
   box-sizing: border-box;
 }
+
+#value {
+  inline-size: inherit;
+  overflow-wrap: break-word;
+}
