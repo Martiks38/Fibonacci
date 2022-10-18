@@ -7,15 +7,48 @@
   <title>Fibo</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./style.css">
+
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
   <section class="h-screen">
-    <div class="pt-10 pb-20 px-8">
-      <h1 class="pt-4 md:text-8xl">Generador de números de Fibonacci</h1>
+    <div class="flex flex-col items-center pt-10 pb-20 px-8">
+      <h1 class="pt-4 text-center font-black sm:text-2xl md:text-4xl">Generador de números de Fibonacci</h1>
+      <div class="w-full md:w-96">
+        <form id="generator" class="flex flex-col mt-10 gap-y-2">
+          <label for="numberTerm" class="font-bold sm:text-xl">Introduzca un número no negativo</label>
+          <input type="text" name="numberTerm" id="numberTerm"
+            class="block px-2 py-1 border-solid border-4 border-black rounded-md focus:border-blue-700 outline-none"
+            placeholder="10" autofocus autocomplete="off">
+          <button type="submit"
+            class="mt-4 px-2.5 py-1.5 h-30 border-4 border-solid border-black rounded-md font-semibold" id="btn-search">
+            <span class="flex items-center justify-center h-30 btn-text">Calcular</span>
+            <div id="spin" class="w-fit mx-auto animate-spin hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4335 4335" width="30" height="30">
+                <path fill="#008DD2"
+                  d="M3346 1077c41,0 75,34 75,75 0,41 -34,75 -75,75 -41,0 -75,-34 -75,-75 0,-41 34,-75 75,-75zm-1198 -824c193,0 349,156 349,349 0,193 -156,349 -349,349 -193,0 -349,-156 -349,-349 0,-193 156,-349 349,-349zm-1116 546c151,0 274,123 274,274 0,151 -123,274 -274,274 -151,0 -274,-123 -274,-274 0,-151 123,-274 274,-274zm-500 1189c134,0 243,109 243,243 0,134 -109,243 -243,243 -134,0 -243,-109 -243,-243 0,-134 109,-243 243,-243zm500 1223c121,0 218,98 218,218 0,121 -98,218 -218,218 -121,0 -218,-98 -218,-218 0,-121 98,-218 218,-218zm1116 434c110,0 200,89 200,200 0,110 -89,200 -200,200 -110,0 -200,-89 -200,-200 0,-110 89,-200 200,-200zm1145 -434c81,0 147,66 147,147 0,81 -66,147 -147,147 -81,0 -147,-66 -147,-147 0,-81 66,-147 147,-147zm459 -1098c65,0 119,53 119,119 0,65 -53,119 -119,119 -65,0 -119,-53 -119,-119 0,-65 53,-119 119,-119z" />
+              </svg>
+            </div>
+          </button>
+        </form>
+        <div class="mt-8">
+          <p id="error"
+            class="mx-auto px-4 py-2 w-fit bg-zinc-800 text-red-400 border-4 border-solid border-red-800 rounded-md font-bold hidden">
+          </p>
+        </div>
+        <div class="items-start pt-12 w-full">
+          <h2 class="flex flex-wrap items-center gap-x-1 w-full font-bold text-lg">
+            El término <span id="term">10</span> es
+          </h2>
+          <div id="value" class="w-full font-black text-2xl">55</div>
+        </div>
+      </div>
     </div>
   </section>
+  <script src="./script/index.js"></script>
 </body>
 
 </html>

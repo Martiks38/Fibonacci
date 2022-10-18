@@ -1,0 +1,13 @@
+:root {
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#error,
+#value {
+  inline-size: inherit;
+  overflow-wrap: break-word;
+}
