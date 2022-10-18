@@ -41,6 +41,7 @@ Devuelve el valor del n-ésimo término de la sucesión de Fibonacci.
 - HTML
 - CSS
 - JavaScript
+- Tailwind
 
 ## APP
 
